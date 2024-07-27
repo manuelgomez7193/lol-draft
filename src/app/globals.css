@@ -2,32 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+    font-family: 'BeaufortforLOL'; /* El nombre que quieras darle a la fuente */
+    src: url('../font/BeaufortforLOL-Regular.ttf') format('truetype'); /* La ruta a tu archivo de fuente relativo a la carpeta public */
+    font-weight: normal;
+    font-style: normal;
+}
+  
+/* Otras variantes de la fuente como bold o italic */
+@font-face {
+    font-family: 'BeaufortforLOL';
+    src: url('../font/BeaufortforLOL-Bold.ttf') format('truetype');
+    font-weight: bold;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html{
+    background-color: rgb(1, 10, 19);
+    font-family: 'BeaufortforLOL', sans-serif;
+    color: #c4b998;
+    margin-left: calc(100vw - 100%); /* Estilo para evitar que pegue un salto la pagina al aparecer y desaparecer el scroll bar */
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.button-custom{
+    display: inline-block;
+    cursor: pointer;
+    padding: 9px 35px 9px 15px;
+    outline: 0;
+    border: 2px solid #7e633b;
+    border-radius: 0;
+    background: #111;
+    color: #c4b998;
+    max-width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.input-custom{
+    display: inline-block;
+    cursor: text;
+    padding: 9px 35px 9px 15px;
+    outline: 0;
+    border: 2px solid #7e633b;
+    border-radius: 0;
+    background: #111;
+    color: #c4b998;
+    max-width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.container-champion{
+    width: 6vw;
+    height: 13vh;
+    min-width: 70px;
+    min-height: 90px;
 }
