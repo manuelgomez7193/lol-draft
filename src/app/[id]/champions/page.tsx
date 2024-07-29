@@ -1,4 +1,6 @@
+import Team from "./team";
 import ChampionsList from "./champions-list";
+import '../../../lib/fontawesome';
 
 export default async function ChampionsPage({
   params,
@@ -9,6 +11,7 @@ export default async function ChampionsPage({
 
   return (
       <div>
+          <Team/>
           <ChampionsList id={id} />
       </div>
   );
