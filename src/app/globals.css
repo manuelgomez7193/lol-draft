@@ -20,7 +20,7 @@ html{
     background-color: #010101;
     font-family: 'BeaufortforLOL', sans-serif;
     color: #c4b998;
-    margin-left: calc(100vw - 100%); /* Estilo para evitar que pegue un salto la pagina al aparecer y desaparecer el scroll bar */
+    /* margin-left: calc(100vw - 100%); Estilo para evitar que pegue un salto la pagina al aparecer y desaparecer el scroll bar - Al parecer ya no es necesario (? */
 }
 
 .button-custom{
@@ -69,4 +69,136 @@ html{
     height: 18px !important;
     margin: 9px;
     color: #181a1e;
+}
+
+.selecChamp{
+    /* border-left: 10px solid #fabe0a; */
+    height: 7rem;
+    position: relative;
+}
+
+.lineaSelecChampSeparador{
+    color: #383325;
+    width: 20rem;
+    border-image: linear-gradient(to right, #383325, #010101) 1; /* Degradado de blanco a transparente */
+}
+
+.containerSelecChampSeparador{
+    width: auto;
+    margin-left: 17px;
+}
+
+.puntoSelecChampSeparador{
+    border: solid 1.5px #383325;
+    width: 7px;
+    height: 7px;
+    transform: rotate(45deg);
+}
+
+.up{
+    position: absolute;
+    top: 0%;
+}
+
+.bottom{
+    position: absolute;
+    bottom: 0%;
+}
+
+.left{
+    position: absolute;
+    left: 0%;
+}
+
+.separadorAmarillo{
+    border-left: 10px solid #fabe0a;
+    height: 104px;
+    top: 4px;
+}
+
+.blockChamp{
+    border: 1px solid #1e282d;
+    width: 34px;
+    height: 33px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 21px;
+}
+
+.iconBlock{
+    width: 18px !important;
+    height: 18px !important;
+    color: #af1c33;
+    position: absolute;
+    bottom: -9px;
+    left: 9px;
+    stroke: #010101;
+    stroke-width: 20px;
+    stroke-opacity: 50%;
+}
+
+.circuloCampeonSeleccionado {
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    border: 1px solid #876930;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 67px;
+}
+
+.circuloCampeonSeleccionado::before {
+    content: '';
+    position: absolute;
+    width: 70px;
+    top: -1px;
+    transform: translateY(-50%);
+    left: -1px;
+    height: 70px;
+    border-radius: 100%;
+    box-sizing: border-box;
+    border: 3px solid transparent;
+    border-right: 3px solid #fdf0d1;
+    border-top: thin;
+    animation: rotate 4s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.containerNickUsuario{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 155px;
+    color: #f0b60a;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.iconArrowSelec{
+    font-size: 1rem;
+    color: #0ac4b9;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 300px;
+}
+
+.containerContandorUsuario{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 320px;
+    color: #f0e6d2;
+    font-weight: 600;
+    font-size: 2rem;
 }
